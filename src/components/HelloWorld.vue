@@ -13,6 +13,14 @@ const add = () => {
   store.commit('count/increment');
 };
 
+import { accountService } from '@/services/apis/index';
+const handleClick = async () => {
+  const res = await accountService.getUserName({
+    name: 'SherwinShen',
+  });
+  console.log(res);
+};
+
 defineProps<{ msg: string }>();
 </script>
 
@@ -44,6 +52,8 @@ defineProps<{ msg: string }>();
     <code>components/HelloWorld.vue</code>
     to test hot module replacement.
   </p>
+
+  <el-button @click="handleClick">click request</el-button>
 </template>
 
 <style scoped>
