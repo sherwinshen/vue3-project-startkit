@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+
+import { useStore } from 'vuex';
+const store = useStore();
+const count = computed(() => {
+  return store.state.count.count;
+});
+const doubleCount = computed(() => {
+  return store.getters['count/double'];
+});
+const add = () => {
+  store.commit('count/increment');
+};
 
 defineProps<{ msg: string }>();
-
-const count = ref(0);
 </script>
 
 <template>
@@ -28,7 +38,7 @@ const count = ref(0);
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <button type="button" @click="add">count is: {{ doubleCount }} - {{ count }}</button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code>
