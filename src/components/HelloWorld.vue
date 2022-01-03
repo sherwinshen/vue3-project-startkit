@@ -38,7 +38,7 @@ defineProps<{ msg: string }>();
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button type="button" @click="add">count is: {{ doubleCount }} - {{ count }}</button>
+  <el-button @click="add">count is: {{ doubleCount }} - {{ count }}</el-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code>
