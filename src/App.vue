@@ -9,10 +9,10 @@ import HelloWorld from './components/HelloWorld.vue';
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
-<style>
+<style lang="less">
 #app {
   margin-top: 60px;
-  color: #2c3e50;
+  color: @main-color;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;

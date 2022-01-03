@@ -12,4 +12,11 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "${resolve(__dirname, 'src/assets/styles/common/index.less')}";`, // 引入公共内容
+      },
+    },
+  },
 });
