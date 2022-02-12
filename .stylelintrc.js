@@ -9,12 +9,11 @@ module.exports = {
        rules: {'prettier/prettier': true},
      */
     'stylelint-prettier/recommended',
-  ],
-  plugins: [
-    'stylelint-order', // CSS 属性排序
+    'stylelint-config-recommended-vue',
   ],
   rules: {
     // 更多规则详见：https://stylelint.io/user-guide/rules/list
+    'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {

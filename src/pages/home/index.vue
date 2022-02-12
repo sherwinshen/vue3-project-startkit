@@ -29,7 +29,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   height: 48px;
-  border-bottom: 1px solid rgba(145, 145, 145, 0.267);
+  border-bottom: 1px solid rgb(145 145 145 / 26.7%);
 
   .github-link {
     :deep(.el-link--inner) {
