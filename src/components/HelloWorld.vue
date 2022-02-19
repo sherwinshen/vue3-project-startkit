@@ -1,16 +1,24 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
-import { useStore } from 'vuex';
-const store = useStore();
-const count = computed(() => {
-  return store.state.count.count;
-});
-const doubleCount = computed(() => {
-  return store.getters['count/double'];
-});
+/* Vuex 已废弃 */
+// import { useStore } from 'vuex';
+// const store = useStore();
+// const count = computed(() => {
+//   return store.state.count.count;
+// });
+// const doubleCount = computed(() => {
+//   return store.getters['count/double'];
+// });
+// const add = () => {
+//   store.commit('count/increment');
+// };
+
+/* pinia 替代 vuex */
+import { useCounterStore } from '@/store/modules/counter';
+const counter = useCounterStore();
 const add = () => {
-  store.commit('count/increment');
+  counter.increment();
 };
 
 import { accountService } from '@/services/apis/index';
@@ -46,7 +54,7 @@ defineProps<{ msg: string }>();
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <el-button @click="add">count is: {{ doubleCount }} - {{ count }}</el-button>
+  <el-button @click="add">count is: {{ counter.doubleCount }} - {{ counter.count }}</el-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code>
