@@ -15,19 +15,14 @@ module.exports = {
   ],
   // scope 类型
   scopes: [
-    ['components', '组件相关'],
-    ['hooks', 'hook 相关'],
-    ['utils', 'utils 相关'],
-    ['styles', '样式相关'],
-    ['deps', '项目依赖'],
-    // 如果选择 custom，后面会让你再输入一个自定义的 scope。也可以不设置此项，把后面的 allowCustomScopes 设置为 true
-    // ['custom', '以上都不是，我要自定义'],
-  ].map(([value, description]) => {
-    return {
-      value,
-      name: `${value.padEnd(30)} (${description})`,
-    };
-  }),
+    { name: 'components' },
+    { name: 'hooks' },
+    { name: 'utils' },
+    { name: 'styles' },
+    { name: 'deps' },
+    // { name: 'custom' }, // 如果选择 custom，后面会让你再输入一个自定义的 scope。也可以不设置此项，把后面的 allowCustomScopes 设置为 true
+  ],
+  allowCustomScopes: true,
   // 交互提示信息
   messages: {
     type: '确保本次提交遵循 Angular 规范！\n选择你要提交的类型：',
@@ -43,5 +38,4 @@ module.exports = {
   allowBreakingChanges: ['feat', 'fix'],
   // subject 限制长度
   subjectLimit: 100,
-  allowCustomScopes: true,
 };
