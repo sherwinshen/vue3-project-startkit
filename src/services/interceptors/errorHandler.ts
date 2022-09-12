@@ -1,6 +1,7 @@
 import { AxiosError, AxiosResponse } from 'axios';
 import { SuccessResultCodes, showStatus } from '@/services/interceptors/status';
 import debounce from 'lodash/debounce';
+import { ElMessageBox } from 'element-plus';
 
 export interface AxiosInterceptor<T> {
   onFulfilled?: (value: T) => T;

@@ -14,7 +14,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["node", "element-plus/global"]
+    "types": ["node", "element-plus/global"],
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "**/*.d.ts"]
 }
