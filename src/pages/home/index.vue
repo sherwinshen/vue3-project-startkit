@@ -1,9 +1,14 @@
 <template>
   <div class="home-page">
     <el-header class="header">
-      <div class="header__title">前端 Vue3 开发脚手架</div>
+      <div class="header__title">前端 Vue3 项目</div>
       <div class="header__link">
-        <el-link type="info" href="https://github.com/sherwinshen/fe-vue3-startkit" target="_blank" class="github-link">
+        <el-link
+          type="info"
+          href="https://github.com/sherwinshen/vue3-project-startkit"
+          target="_blank"
+          class="github-link"
+        >
           <img src="./../../assets/images/github.png" class="github-logo" />
           Github
         </el-link>
@@ -12,6 +17,11 @@
     <el-main class="container">
       <div class="imgs">
         <img src="./../../assets/images/logos.png" class="full-height" />
+      </div>
+      <div class="link">
+        <el-link href="https://fe-planet.netlify.app/technology/blogs-docs/vue3-startkit.html" target="_blank">
+          🔗 前端 Vue3 项目搭建指南
+        </el-link>
       </div>
     </el-main>
   </div>
@@ -53,6 +63,14 @@ export default {
     align-items: center;
     justify-content: center;
     height: 50%;
+  }
+
+  .link {
+    margin-top: 20px;
+
+    :deep(.el-link--inner) {
+      font-size: 20px;
+    }
   }
 
   .full-height {

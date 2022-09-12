@@ -1,11 +1,9 @@
-![main](./main.png)
+# 前言
 
-# 0. 前言
+本项目为文章《前端 Vue3 项目搭建指南》&《前端统一代码规范指南》的代码仓库，主要详细介绍了基于 Vue3 技术栈初始化前端项目的完整流程，包含框架搭建、代码规范、单元测试和自动部署等内容，完整内容详见：
 
-本项目为专题文章《前端 Vue3 项目搭建指南》的代码仓库，主要详细介绍了基于 Vue3 技术栈初始化前端项目的完整流程，包含框架搭建、代码规范、单元测试和自动部署等内容，完整内容详见：
-
-1. [【工程化】前端 Vue3 项目搭建指南](https://www.yuque.com/sherwin-sw/fe/vue3-startkit)
-2. [【工程化】前端统一代码规范指南](https://www.yuque.com/sherwin-sw/fe/code-style)
+1. [前端 Vue3 项目搭建指南](https://fe-planet.netlify.app/technology/blogs-docs/vue3-startkit.html)
+2. [前端统一代码规范指南](https://fe-planet.netlify.app/technology/blogs-docs/code-style.html)
 
 # 1. 架构搭建
 
@@ -36,9 +34,7 @@
 
 # 4. 单元测试
 
+- [vitest](https://cn.vitest.dev)：A Vite-native unit test framework. It's fast!
 - [Vue Test Utils](https://next.vue-test-utils.vuejs.org/)：a set of utility functions aimed to simplify testing Vue.js components
-- [jest](https://jestjs.io/)：a delightful JavaScript Testing Framework with a focus on simplicity
-- [vue-jest](https://github.com/vuejs/vue-jest)：Jest Vue transformer
-- [ts-jest](https://kulshekhar.github.io/ts-jest/)：Delightful testing with Jest and TypeScript
 
 > 如果发现本项目有错误，欢迎提交 issues 或邮件 sherwin_sw@163.com
